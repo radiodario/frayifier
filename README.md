@@ -1,7 +1,7 @@
-[Frayifier]({{ git.io-URL }})  [![Circle CI](https://circleci.com/gh/{{ git.username }}/frayifier/tree/master.svg?style=svg)](https://circleci.com/gh/{{ git.username }}/frayifier/tree/master)
+[Frayifier](http://peter-mouland.github.io/frayifier)  [![Circle CI](https://circleci.com/gh/peter-mouland/frayifier/tree/master.svg?style=svg)](https://circleci.com/gh/peter-mouland/frayifier/tree/master)
 ========================
 
-> Please take a look at the [demo page]({{ git.io-URL }})
+> Please take a look at the [demo page](http://peter-mouland.github.io/frayifier)
 
 ## Quick-Start
 

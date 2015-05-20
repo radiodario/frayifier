@@ -1,8 +1,8 @@
 {
     "name": "frayifier",
-    "homepage": "{{ git.HTTPS-URL }}",
+    "homepage": "https://github.com/peter-mouland/frayifier.git",
     "authors": [
-        "{{ git.author }} <{{ git.email }}>"
+        "Peter Mouland <peter.mouland@gmail.com>"
     ],
     "description": "Frayifier",
     "main": "dist",
