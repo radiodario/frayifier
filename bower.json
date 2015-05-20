@@ -1,18 +1,20 @@
 {
-    "name": "frayifier",
-    "homepage": "https://github.com/peter-mouland/frayifier.git",
-    "authors": [
-        "Peter Mouland <peter.mouland@gmail.com>"
-    ],
-    "description": "Frayifier",
-    "main": "dist",
-    "license": "BSD3",
-    "ignore": [
-        "**/*",
-        "!dist/**/*",
-        "!src/**/*"
-    ],
-    "devDependencies": {
-        "bskyb-core": "~0.0.4"
-    }
+  "name": "frayifier",
+  "homepage": "https://github.com/peter-mouland/frayifier.git",
+  "authors": [
+    "Peter Mouland <peter.mouland@gmail.com>"
+  ],
+  "description": "Frayifier",
+  "main": "dist",
+  "license": "BSD3",
+  "ignore": [
+    "**/*",
+    "!dist/**/*",
+    "!src/**/*"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "o-grid": "Financial-Times/o-grid#~3.1.5",
+    "o-forms": "Financial-Times/o-forms#~1.0.2"
+  }
 }

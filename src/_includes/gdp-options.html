@@ -1,0 +1,64 @@
+
+    <div class="o-forms-group ">
+        <label class="o-forms-label">Select Country</label>
+        <select class="o-forms-select" name="countries" multiple style="height:auto;background:#fff;">
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Germany">Germany</option>
+            <option value="China">China</option>
+            <option value="Japan">Japan</option>
+        </select>
+    </div>
+
+    <!-- type -->
+
+    <div class="o-forms-group">
+
+        <div data-o-grid-colspan="one-quarter">
+            <input type="radio" name="gdp-type" value="Real" class="o-forms-radio" id="radio11" checked></input>
+            <label for="radio11" class="o-forms-label">Real</label>
+        </div>
+        <div data-o-grid-colspan="one-quarter">
+            <input type="radio" name="gdp-type" value="Per Capita" class="o-forms-radio" id="radio12"></input>
+            <label for="radio12" class="o-forms-label">Per Capita</label>
+        </div>
+
+
+
+
+    </div>
+
+    <br />
+
+    <!-- Dates -->
+
+    <div id=dates >
+
+        <div class="o-grid-row">
+            <div data-o-grid-colspan="one-half">
+                <label for="startDate" class="o-forms-label">Start</label>
+            </div>
+            <div data-o-grid-colspan="one-half">
+                <label for="endDate" class="o-forms-label">End</label>
+            </div>
+            <div data-o-grid-colspan="one-half">
+                <select class="o-forms-select" id="startDate" name="startDate" data-bind="startDate">
+                    <option selected disabled>YYYY</option>
+                    <option value="2014">2014</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2007">2007</option>
+                </select>
+            </div>
+            <div data-o-grid-colspan="one-half">
+                <select class="o-forms-select" id="endDate" name="endDate" data-bind="endDate">
+                    <option selected >Now</option>
+                    <option value="2014">2014</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2007">2007</option>
+                </select>
+            </div>
+        </div>
+
+    </div>

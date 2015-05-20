@@ -1,28 +1,39 @@
-// By default JS dependency is handled using CommonJS and browserify
-// please see 'docs/API.md#scripts' for more info
-//
-// You may need other components. i.e. Run and uncomment the following :
-// $ bower install dependency-name --save
-// var dependency = require('../../bower_components/dependency-name/src/scripts/index');
+var events = require('./utils/events.js');
 
-
-//example function
-function Main(){
-    this.version = require('./utils/version.js');//keep this : each component exposes its version
+function getOptions(select1) {
+    var selected1 = [];
+    for (var i = 0; i < select1.length; i++) {
+        if (select1.options[i].selected) selected1.push(select1.options[i].value);
+    }
+    var last = selected1.pop();
+    return selected1.join(', ') + ' and ' + last;
 }
 
-Main.prototype.sum = function(args){
-    var total = 0;
-    args.forEach(function(int){
-        total += int;
-    });
-    return total;
+
+function setHiddenOptionFields(ev, e){
+    ev.preventDefault();
+    var formType = document.location.hash.replace('#type__','');
+    var form = document.forms[formType + '-form'];
+    form.subtitle.value = formType + ' from ' + getOptions(form.countries);
+    form.callback_url.value = document.location.origin;
+    form.source.value = formType;
+    form.submit();
+}
+
+function Frayifier(){
+    this.version = require('./utils/version.js');
+
+    this.attachEvents();
+}
+
+Frayifier.prototype.attachEvents = function(){
+    var chartTypeButtons = document.querySelectorAll('.chart-type .o-buttons');
+    var exportButtons = document.querySelectorAll('#export .o-buttons');
+    //events.on(chartTypeButtons, 'click', setHiddenChartTypeFields);
+    events.on(exportButtons, 'click', setHiddenOptionFields);
 };
 
-Main.prototype.write = function(args){
-  document.getElementById('demo-functional').innerHTML = this.sum(args);
-};
-
+new Frayifier();
 
 //example export
-module.exports = Main;
+module.exports = Frayifier;

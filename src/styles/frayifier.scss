@@ -1,6 +1,30 @@
-//Import any bower dependencies as so:
-//@import 'bower_components/core/src/styles/modules/colours';
-
 body{
-  content: 'example css';
+  font-family: metricweb;
+  background-color: #fff1e0;
+}
+h1, h2, h3, h4{
+  font-weight: normal;
+}
+.type__options{
+  display: none;
+}
+
+.type__options:target{
+  display: block;
+}
+.chart-types ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.o-buttons{
+  margin: 0.2em;
+}
+
+.clearfix:before,
+.clearfix:after{
+  clear: both;
+  content:' ';
+  display: table;
+
 }
